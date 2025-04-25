@@ -6,7 +6,7 @@ This project demonstrates how NLP can enhance recommendations — from fuzzy tit
 
 ---
 
-## 🚀 Features
+# 🚀 Features
 
 - 🔍 **Fuzzy Title Search** — Corrects misspelled input titles using `fuzzywuzzy`
 - 🧠 **TF-IDF + SVD Recommender** — Based on genres + keywords
@@ -17,14 +17,14 @@ This project demonstrates how NLP can enhance recommendations — from fuzzy tit
 
 ---
 
-## 📂 Dataset
+# 📂 Dataset
 
 - [TMDB 5000 Movie Dataset (Kaggle)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 - File used: `tmdb_5000_movies.csv`
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 | Component               | Description                              |
 |------------------------|------------------------------------------|
@@ -35,35 +35,35 @@ This project demonstrates how NLP can enhance recommendations — from fuzzy tit
 
 ---
 
-## 🧪 How It Works
+# 🧪 How It Works
 
-### 1. Preprocessing
+## 1. Preprocessing
 - Genres and keywords are parsed from JSON strings
 - Combined into searchable strings for TF-IDF and semantic input
 
-### 2. Vector Representations
+## 2. Vector Representations
 - `TF-IDF + SVD`: Reduces high-dimensional keyword space
 - `Sentence Embeddings`: Captures meaning of text semantically
 
-### 3. Recommendation
+## 3. Recommendation
 
 ```python
 recommend_tfidf()        # Based on keyword similarity
 recommend_embedding()    # Based on semantic meaning
 hybrid_search()          # Best of both
 ```
-### 4. Poster + TMDB Links
+## 4. Poster + TMDB Links
 - Fetch live movie posters via TMDB API
 - Link users directly to TMDB movie pages
 
 ---
 
-## 🧪 Example Query
+# 🧪 Example Query
 
-### 🎬 Input:  
+## 🎬 Input:  
 `"I want to watch Marvel movies"`
 
-### 📘 TF-IDF Recommendations:
+## 📘 TF-IDF Recommendations:
 ```text
 The Book of Eli                                    | Score: 0.9305
 World War Z                                        | Score: 0.9302
@@ -76,7 +76,7 @@ eXistenZ                                           | Score: 0.8728
 Rise of the Planet of the Apes                     | Score: 0.8703
 Def-Con 4                                          | Score: 0.8688
 ```
-📘 Results Analysis: High scores, but off-topic
+### 📘 Results Analysis: High scores, but off-topic
 
 ✅ TF-IDF only sees **exact token overlap**.
 
@@ -86,7 +86,7 @@ Def-Con 4                                          | Score: 0.8688
 
 ❌ It **misses** actual Marvel movies like *Avengers* or *Iron Man*.
 
-### 🤖 Embedding Recommendations:
+## 🤖 Embedding Recommendations:
 ```text
 28 Weeks Later                                     | Score: 0.5742
 28 Days Later                                      | Score: 0.5582
@@ -99,7 +99,7 @@ Dawn of the Planet of the Apes                     | Score: 0.4760
 Resident Evil: Apocalypse                          | Score: 0.4724
 Self/less                                          | Score: 0.4552
 ```
-🤖 Results Analysis: Better intent, but not precise
+### 🤖 Results Analysis: Better intent, but not precise
 
 ✅ Sentence embeddings understand the query has *"action"*, *"franchise"*, *"virus"* themes.
 
@@ -109,7 +109,7 @@ Self/less                                          | Score: 0.4552
 
 ❌ It’s **too general** — confusing Marvel with zombie/apocalypse movies.
 
-### 🔀 Hybrid Recommendations (alpha = 0.8):
+## 🔀 Hybrid Recommendations (alpha = 0.8):
 ```text
 Captain America: Civil War                         | Score: 0.3465
 Avengers: Age of Ultron                            | Score: 0.3345
@@ -122,7 +122,7 @@ Special                                            | Score: 0.2966
 X-Men Origins: Wolverine                           | Score: 0.2962
 Thor: The Dark World                               | Score: 0.2905
 ```
-🔀 Results Analysis: On-point, accurate
+### 🔀 Results Analysis: On-point, accurate
 
 ✅ Blends:
   - **TF-IDF** for recognizing “Marvel” in keywords, genres, or title
@@ -132,7 +132,7 @@ Thor: The Dark World                               | Score: 0.2905
 
 ---
 
-## 📊 Method Comparison
+# 📊 Method Comparison
 
 | Method     | Pros                                       | Cons                                      |
 |------------|--------------------------------------------|-------------------------------------------|
@@ -144,7 +144,7 @@ Thor: The Dark World                               | Score: 0.2905
 
 ---
 
-## 🛠️ Installation
+# 🛠️ Installation
 
 Clone the repo and install dependencies:
 
