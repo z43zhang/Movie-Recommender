@@ -4,6 +4,9 @@ A content-based movie recommender system built with **TF-IDF**, **Sentence Embed
 
 This project demonstrates how NLP can enhance recommendations — from fuzzy title matching to full semantic query search.
 
+![App Preview](https://github.com/z43zhang/movie-recommender/blob/main/data/screenshot1.png)
+
+
 ---
 
 # 🚀 Features
