@@ -1,6 +1,5 @@
-# 🌐 **Live Demo**: [Click here to try it out](https://movie-recommender-bwnwhw5kbmhjkszgz6xlwt.streamlit.app/)
 # 🎬 Movie Recommender System
-
+### 🌐 **Live Demo**: [Click here to try it out](https://movie-recommender-bwnwhw5kbmhjkszgz6xlwt.streamlit.app/)
 A content-based movie recommender system built with **TF-IDF**, **Sentence Embeddings**, and a **Hybrid Search** engine. 
 
 This project demonstrates how NLP can enhance recommendations — from fuzzy title matching to full semantic query search.
