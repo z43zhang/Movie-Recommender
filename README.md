@@ -45,13 +45,17 @@ This project demonstrates how NLP can enhance recommendations — from fuzzy tit
 - `TF-IDF + SVD`: Reduces high-dimensional keyword space
 - `Sentence Embeddings`: Captures meaning of text semantically
 
-### 3. Recommendations
+### 3. Recommendation
 
 ```python
 recommend_tfidf()        # Based on keyword similarity
 recommend_embedding()    # Based on semantic meaning
 hybrid_search()          # Best of both
 ```
+### 4. Poster + TMDB Links
+- Fetch live movie posters via TMDB API
+- Link users directly to TMDB movie pages
+
 ---
 
 ## 🧪 Example Query
@@ -59,9 +63,7 @@ hybrid_search()          # Best of both
 ### 🎬 Input:  
 `"I want to watch Marvel movies"`
 
----
-
-## 📘 TF-IDF Recommendations:
+### 📘 TF-IDF Recommendations:
 ```text
 The Book of Eli                                    | Score: 0.9305
 World War Z                                        | Score: 0.9302
@@ -84,7 +86,7 @@ Def-Con 4                                          | Score: 0.8688
 
 ❌ It **misses** actual Marvel movies like *Avengers* or *Iron Man*.
 
-## 🤖 Embedding Recommendations:
+### 🤖 Embedding Recommendations:
 ```text
 28 Weeks Later                                     | Score: 0.5742
 28 Days Later                                      | Score: 0.5582
@@ -107,7 +109,7 @@ Self/less                                          | Score: 0.4552
 
 ❌ It’s **too general** — confusing Marvel with zombie/apocalypse movies.
 
-## 🔀 Hybrid Recommendations (alpha = 0.8):
+### 🔀 Hybrid Recommendations (alpha = 0.8):
 ```text
 Captain America: Civil War                         | Score: 0.3465
 Avengers: Age of Ultron                            | Score: 0.3345
@@ -128,6 +130,7 @@ Thor: The Dark World                               | Score: 0.2905
 
 🎯 It’s the **only method** that actually understands *you want Marvel-brand superhero movies*, not just action/zombies.
 
+---
 
 ## 📊 Method Comparison
 
@@ -138,3 +141,14 @@ Thor: The Dark World                               | Score: 0.2905
 | **Hybrid** | 🎯 Balances meaning + metadata = accurate  | Slightly slower, needs alpha tuning       |
 
 > 💡 The Hybrid method prioritizes Marvel movies based on both semantic intent and metadata — unlike TF-IDF or Embedding alone.
+
+---
+
+## 🛠️ Installation
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/z43zhang/movie-recommender.git
+cd movie-recommender
+pip install -r requirements.txt
