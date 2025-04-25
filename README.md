@@ -8,7 +8,7 @@
 
 - 🔍 **Fuzzy Title Search** — Corrects misspelled input titles using `fuzzywuzzy`
 - 🧠 **TF-IDF + SVD Recommender** — Based on genres + keywords
-- 🤖 **Sentence Embedding Recommender** — Uses `SentenceTransformer` (`MiniLM`) on genres + keywords + overview
+- 🤖 **Sentence Embedding** — Uses `SentenceTransformer` (`MiniLM`) on genres + keywords + overview
 - 🔀 **Hybrid Recommender** — Combines keyword and semantic signals with tunable weights
 - 💬 **Natural Language Query** — Understands full-sentence queries
 - 📊 **Consistent Scoring Output** — See and compare results from all 3 engines
