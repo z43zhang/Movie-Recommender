@@ -1,4 +1,4 @@
-## 🌐 **Live Demo**: [Click here to try it out](https://movie-recommender-bwnwhw5kbmhjkszgz6xlwt.streamlit.app/)
+# 🌐 **Live Demo**: [Click here to try it out](https://movie-recommender-bwnwhw5kbmhjkszgz6xlwt.streamlit.app/)
 
 ![App Preview](https://github.com/z43zhang/movie-recommender/blob/main/data/screenshot1.png)
 
