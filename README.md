@@ -6,6 +6,10 @@ This project demonstrates how NLP can enhance recommendations — from fuzzy tit
 
 ---
 
+# 🌐 **Live Demo**: [Click here to try it out](https://movie-recommender-bwnwhw5kbmhjkszgz6xlwt.streamlit.app/)
+
+---
+
 # 🚀 Features
 
 - 🔍 **Fuzzy Title Search** — Corrects misspelled input titles using `fuzzywuzzy`
