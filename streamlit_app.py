@@ -88,7 +88,7 @@ def get_embeddings(text_list):
 
 # embedding_matrix = get_embeddings(df['embedding_text'].tolist())
 # load precomputed embedding matrix for fast response
-embedding_matrix = np.load("embedding_matrix.npy")
+embedding_matrix = np.load("artifacts/embedding_matrix.npy")
 
 
 # Movie title → index
