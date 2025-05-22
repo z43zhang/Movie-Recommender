@@ -1,6 +1,6 @@
 # 🌐 **Live Demo**: [Click here to try it out](https://movie-recommender-bwnwhw5kbmhjkszgz6xlwt.streamlit.app/)
 
-![App Preview](https://github.com/z43zhang/movie-recommender/blob/main/data/screenshot1.png)
+![App Preview](https://github.com/z43zhang/movie-recommender/blob/main/assets/homepage.png)
 
 ### 🎥 A content-based movie recommender built with **TF-IDF**, **Sentence Embeddings**, and a **Hybrid Search** engine. 
 
