@@ -5,3 +5,4 @@ sentence-transformers
 fuzzywuzzy[speedup]
 requests
 python-dotenv
+joblib

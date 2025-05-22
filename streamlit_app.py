@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import json
+import joblib
 import numpy as np
 
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -74,13 +75,25 @@ def load_data():
 df = load_data()
 
 # TF-IDF + SVD
-tfidf_vectorizer = TfidfVectorizer(max_features=2000)
-tfidf_matrix = tfidf_vectorizer.fit_transform(df['tfidf_text'])
-svd = TruncatedSVD(n_components=50)
-tfidf_reduced = svd.fit_transform(tfidf_matrix)
+@st.cache_resource
+def load_tfidf_models():
+    vectorizer = joblib.load("artifacts/tfidf_vectorizer.pkl")
+    matrix = np.load("artifacts/tfidf_matrix.npy")
+    svd = joblib.load("artifacts/tfidf_svd.pkl")
+    reduced = np.load("artifacts/tfidf_reduced.npy")
+    return vectorizer, matrix, svd, reduced
 
-# Sentence Embeddings
-embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+tfidf_vectorizer, tfidf_matrix, svd, tfidf_reduced = load_tfidf_models()
+
+tfidf_matrix = tfidf_vectorizer.fit_transform(df['tfidf_text'])
+
+# Cache Model Loading
+@st.cache_resource
+def load_embedding_model():
+    return SentenceTransformer('all-MiniLM-L6-v2')
+
+embedding_model = load_embedding_model()
+
 
 @st.cache_data
 def get_embeddings(text_list):
